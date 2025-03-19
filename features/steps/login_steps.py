@@ -29,11 +29,11 @@ def step_credentials(context):
     # driver.find_element(By.XPATH, "//div[@class='AsY17b'][1]").click()
 
     wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@type='email']")))
-    driver.find_element(By.XPATH, "//input[@type='email']").send_keys("alinpopescovici1234@gmail.com")
+    driver.find_element(By.XPATH, "//input[@type='email']").send_keys("email") #insert a valid email
     driver.find_element(By.XPATH, "//button[span[text()='Next']]").click()
 
     wait.until(EC.visibility_of_element_located((By.XPATH, "//input[@type='password']")))
-    driver.find_element(By.XPATH, "//input[@type='password']").send_keys("abcd1234.@")
+    driver.find_element(By.XPATH, "//input[@type='password']").send_keys("password") #insert a valid password for the email provided
     driver.find_element(By.XPATH, "//button[span[text()='Next']]").click()
 
 @then('Login successful')
