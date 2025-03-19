@@ -1,6 +1,14 @@
-Feature: Login to the application
+Feature: User Login
 
-  Scenario: User logs in with valid credentials
+  Scenario Outline: Login with multiple users
     Given User opens login page
-    When Introduce credentials
+    When Introduce credentials with username "<email>" and password "<password>"
     Then Login successful
+
+    Examples:
+      | email               | password        |
+      | example_email       | example_pass    |
+      | example_email       | example_pass    |
+      | example_email       | example_pass    |
+
+
